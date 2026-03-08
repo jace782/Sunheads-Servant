@@ -1,0 +1,28 @@
+# Terms of Service
+
+## Introduction
+These Terms of Service govern your use of the Sunhead's Servant Discord bot. By using the bot, you agree to comply with these terms.
+
+## Acceptance of Terms
+By accessing or using the bot, you accept these Terms. If you do not agree, please refrain from using the bot.
+
+## User Responsibilities
+You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account. You agree to use the bot only for lawful purposes and in accordance with these Terms.
+
+## Intellectual Property Rights
+All content, features, and functionality of the bot are the exclusive property of Sunhead and its licensors. You may not reproduce, distribute, or create derivative works without explicit permission.
+
+## Limitations of Liability
+To the fullest extent permitted by law, Sunhead shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of the bot or inability to use it.
+
+## Termination of Access
+We reserve the right to suspend or terminate your access to the bot for any reason, including breach of these Terms.
+
+## Modifications to Terms
+Sunhead reserves the right to modify these Terms at any time. Changes will be effective upon posting the revised Terms on this page, and your continued use of the bot after modifications constitutes your acceptance of the new Terms.
+
+## Governing Law
+These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction].
+
+## Contact Information
+If you have any questions about these Terms, please contact us at [Your Contact Information].
