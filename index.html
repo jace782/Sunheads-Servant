@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Sunhead's Servant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, sans-serif;
+      background: #0d0f14;
+      color: #e3e3e3;
+    }
+
+    header {
+      padding: 3rem 1rem;
+      text-align: center;
+      background: linear-gradient(135deg, #5865f2, #1e1f26);
+      box-shadow: 0 0 40px rgba(0,0,0,0.5);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 3rem;
+      font-weight: 800;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+      color: #8ea2ff;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 0 1.5rem 3rem;
+    }
+
+    .card {
+      background: #151821;
+      border-radius: 14px;
+      padding: 1.8rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #22252f;
+      box-shadow: 0 0 25px rgba(0,0,0,0.35);
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.9rem 1.6rem;
+      border-radius: 999px;
+      background: #5865f2;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: 0.2s;
+    }
+
+    .btn:hover {
+      background: #4752c4;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Sunhead's Servant</h1>
+    <p>Your dark‑themed Discord moderation & game‑linking companion.</p>
+  </header>
+
+  <main>
+
+    <section class="card">
+      <h2>About the Bot</h2>
+      <p>
+        Sunhead's Servant is a powerful Discord moderation and utility bot designed to keep your server clean, organized, and connected. 
+        With advanced role management, Roblox game linking, and message proxy commands, it gives server owners full control.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Core Features</h2>
+      <ul>
+        <li><strong>Role Management:</strong> Create, delete, assign, and remove roles using simple <code>!</code> commands.</li>
+        <li><strong>Roblox Game Linking:</strong> Use <code>!link</code> to connect your Roblox game to the bot via a custom URL.</li>
+        <li><strong>Proxy Messaging:</strong> Send messages as the bot using <code>!write #channel message</code>.</li>
+        <li><strong>Utility Tools:</strong> Helpful commands for server owners and admins.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Command Style</h2>
+      <p>
+        All commands use the classic prefix format:
+      </p>
+      <pre style="background:#0f1117;padding:1rem;border-radius:8px;overflow:auto;">
+!link <game-url>
+!write #channel your message here
+!createrole <name>
+!giverole @user <role>
+      </pre>
+    </section>
+
+    <section class="card">
+      <h2>Invite the Bot</h2>
+      <p>Add Sunhead's Servant to your server in seconds.</p>
+      <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1480007153858379796&permissions=8&response_type=code&redirect_uri=https%3A%2F%2F49ddee34-7f04-4159-b2b2-6ccae5b2121b-00-h4l6jdfknd1p.spock.replit.dev%2Fapi%2Fdiscord%2Fwebhook&integration_type=0&scope=identify+connections+email+applications.commands+guilds.join+voice+guilds+account.global_name.update+dm_channels.messages.read+sdk.social_layer+gateway.connect+role_connections.write+applications.store.update+applications.builds.upload+bot+guilds.members.read" target="_blank">Invite to Discord</a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sunhead's Servant · Not affiliated with Discord or Roblox
+  </footer>
+
+</body>
+</html>
