@@ -1,0 +1,38 @@
+# Privacy Policy for Sunhead's Servant Discord Bot
+
+**Effective Date: 2026-03-08**  
+This privacy policy describes how Sunhead's Servant Discord bot (hereinafter referred to as "the Bot") handles personal information provided by users within the Discord platform. 
+
+## Information We Collect  
+The Bot may collect the following types of information:  
+- **User Information**: The Bot may collect username, user ID, and any other information users choose to share when they interact with it.
+- **Message Content**: The Bot may process messages sent to it and collect data contained in those messages for the purpose of carrying out its functionalities.
+- **Server Information**: The Bot may access server (guild) data, including server ID and member lists, to provide its functionalities.
+
+## How We Use Your Information  
+We may use the information we collect for the following purposes:  
+- To enhance user experience and interaction with the Bot.  
+- To provide and maintain our services, including troubleshooting and improving reliability.  
+- To understand how our Bot is being used and to analyze usage trends.
+
+## Data Storage  
+All data is stored securely on servers compliant with appropriate data protection regulations. We will not store personal data longer than necessary for the purposes outlined in this policy.
+
+## Information Sharing  
+- **Third Parties**: We do not share personal information with third parties except as required by law or to protect our rights and the rights of others.
+- **User Consent**: We may share information with third parties only if users have provided consent.
+
+## Data Security  
+We take appropriate security measures to protect personal information from unauthorized access, alteration, disclosure, or destruction.
+
+## User Rights  
+Users have the right to:  
+- Request access to personal information we hold about them.  
+- Request correction of inaccurate or incomplete personal information.  
+- Request deletion of their personal information under applicable laws.
+
+## Changes to This Privacy Policy  
+We may update this privacy policy from time to time. We encourage users to review this policy periodically for any changes.  
+
+## Contact Us  
+If you have any questions or concerns about this privacy policy or our handling of your personal information, please contact us through the Bot or through our Discord server.
