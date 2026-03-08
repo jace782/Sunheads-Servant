@@ -12,6 +12,25 @@
       color: #f0f0f5;
     }
 
+    /* NAVBAR */
+    nav {
+      background: #11131a;
+      padding: 1rem 2rem;
+      display: flex;
+      gap: 2rem;
+      font-weight: 600;
+      border-bottom: 1px solid #1d1f29;
+    }
+    nav a {
+      color: #dcdcff;
+      text-decoration: none;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      color: #ffffff;
+      text-shadow: 0 0 8px #6d78ff;
+    }
+
     header {
       padding: 3rem 1rem;
       text-align: center;
@@ -36,11 +55,6 @@
       text-shadow: 0 0 8px rgba(255,180,230,0.5);
     }
 
-    header p {
-      margin-top: 0.8rem;
-      color: #fbe9ff;
-    }
-
     main {
       max-width: 900px;
       margin: 2rem auto;
@@ -62,14 +76,6 @@
       box-shadow: 0 0 35px rgba(255,154,213,0.25);
     }
 
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    li {
-      margin-bottom: 0.4rem;
-    }
-
     .btn {
       display: inline-block;
       margin-top: 1rem;
@@ -88,15 +94,6 @@
       box-shadow: 0 0 25px rgba(255,154,213,0.8);
     }
 
-    pre {
-      background:#10121a;
-      padding:1rem;
-      border-radius:14px;
-      overflow:auto;
-      border: 1px solid #1d1f29;
-      box-shadow: inset 0 0 12px rgba(0,0,0,0.4);
-    }
-
     footer {
       text-align: center;
       padding: 1.5rem;
@@ -107,6 +104,13 @@
   </style>
 </head>
 <body>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="commands.html">Commands</a>
+    <a href="roblox.html">Roblox Linking</a>
+    <a href="tos.html">Terms of Service</a>
+  </nav>
 
   <header>
     <h1>Sunhead's Servant</h1>
@@ -134,17 +138,19 @@
     </section>
 
     <section class="card">
-      <h2>Command Style</h2>
-      <pre>
-!link &lt;game-url&gt;
-!write #channel your message here
-!createrole &lt;name&gt;
-!giverole @user &lt;role&gt;
-      </pre>
-    </section>
-
-    <section class="card">
       <h2>Invite the Bot</h2>
       <p>Add Sunhead's Servant to your server.</p>
 
-      <!-- ⭐ Your working invite link is here -->
+      <a class="btn" href="https://discord.com/oauth2/authorize?client_id=1480007153858379796&permissions=8&scope=bot" target="_blank">
+        Invite to Discord
+      </a>
+    </section>
+
+  </main>
+
+  <footer>
+    &copy; 2026 Sunhead's Servant · Not affiliated with Discord or Roblox
+  </footer>
+
+</body>
+</html>
