@@ -154,4 +154,4 @@ client.on("messageCreate", async (message) => {
 // ----------------------
 // Login
 // ----------------------
-client.login("MTQ4MDAwNzE1Mzg1ODM3OTc5Ng.GmbXIr.ECXZcIDpoXk6TiW3la_0qRHzdL5umd-F1EEEPI");
+client.login(process.env.TOKEN);
