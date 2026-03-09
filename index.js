@@ -117,6 +117,9 @@ client.on("messageCreate", async (message) => {
     if (command === "unmute") {
         const member = message.mentions.members.first();
         if (!member) return message.reply("Mention someone to unmute.");
+       // Unmute command ends here
 
-        const role = message.guild.roles.cache.find(r => r.name === "Muted");
-       client.login(process.env.TOKEN)
+});
+
+// ✅ Login the bot
+client.login(process.env.TOKEN);
