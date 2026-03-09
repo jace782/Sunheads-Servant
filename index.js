@@ -1,7 +1,9 @@
 const { Client, GatewayIntentBits, PermissionsBitField } = require("discord.js");
 const fs = require("fs");
 
+// ----------------------
 // Load warnings file
+// ----------------------
 let warnings = {};
 if (fs.existsSync("./warnings.json")) {
     warnings = JSON.parse(fs.readFileSync("./warnings.json", "utf8"));
@@ -9,7 +11,9 @@ if (fs.existsSync("./warnings.json")) {
     fs.writeFileSync("./warnings.json", "{}");
 }
 
+// ----------------------
 // Create client
+// ----------------------
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,
@@ -19,21 +23,30 @@ const client = new Client({
     ]
 });
 
+// ----------------------
 // Prefix
+// ----------------------
 const prefix = process.env.PREFIX || "sun!";
 
+// ----------------------
+// Ready event
+// ----------------------
 client.on("ready", () => {
     console.log(`Logged in as ${client.user.tag}`);
 });
 
+// ----------------------
 // Message Commands
+// ----------------------
 client.on("messageCreate", async (message) => {
     if (!message.content.startsWith(prefix) || message.author.bot) return;
 
     const args = message.content.slice(prefix.length).trim().split(/ +/);
     const command = args.shift().toLowerCase();
 
+    // ----------------------
     // LOCK
+    // ----------------------
     if (command === "lock") {
         if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels))
             return message.reply("You need Manage Channels to lock this.");
@@ -42,10 +55,12 @@ client.on("messageCreate", async (message) => {
             SendMessages: false
         });
 
-        message.reply("🔒 Channel locked.");
+        return message.reply("🔒 Channel locked.");
     }
 
+    // ----------------------
     // UNLOCK
+    // ----------------------
     if (command === "unlock") {
         if (!message.member.permissions.has(PermissionsBitField.Flags.ManageChannels))
             return message.reply("You need Manage Channels to unlock this.");
@@ -54,19 +69,23 @@ client.on("messageCreate", async (message) => {
             SendMessages: true
         });
 
-        message.reply("🔓 Channel unlocked.");
+        return message.reply("🔓 Channel unlocked.");
     }
 
+    // ----------------------
     // SLOWMODE
+    // ----------------------
     if (command === "slowmode") {
         const amount = parseInt(args[0]);
         if (isNaN(amount)) return message.reply("Give me a number in seconds.");
 
         await message.channel.setRateLimitPerUser(amount);
-        message.reply(`🐌 Slowmode set to ${amount} seconds.`);
+        return message.reply(`🐌 Slowmode set to ${amount} seconds.`);
     }
 
+    // ----------------------
     // WARN
+    // ----------------------
     if (command === "warn") {
         const user = message.mentions.users.first();
         if (!user) return message.reply("Mention someone to warn.");
@@ -78,10 +97,12 @@ client.on("messageCreate", async (message) => {
 
         fs.writeFileSync("./warnings.json", JSON.stringify(warnings, null, 2));
 
-        message.reply(`⚠️ Warned ${user.tag}: ${reason}`);
+        return message.reply(`⚠️ Warned ${user.tag}: ${reason}`);
     }
 
+    // ----------------------
     // DELWARN
+    // ----------------------
     if (command === "delwarn") {
         const user = message.mentions.users.first();
         if (!user) return message.reply("Mention someone to clear warnings.");
@@ -89,10 +110,12 @@ client.on("messageCreate", async (message) => {
         warnings[user.id] = [];
         fs.writeFileSync("./warnings.json", JSON.stringify(warnings, null, 2));
 
-        message.reply(`🧹 Cleared all warnings for ${user.tag}.`);
+        return message.reply(`🧹 Cleared all warnings for ${user.tag}.`);
     }
 
+    // ----------------------
     // MUTE
+    // ----------------------
     if (command === "mute") {
         const member = message.mentions.members.first();
         if (!member) return message.reply("Mention someone to mute.");
@@ -110,10 +133,12 @@ client.on("messageCreate", async (message) => {
         }
 
         await member.roles.add(role);
-        message.reply(`🔇 Muted ${member.user.tag}.`);
+        return message.reply(`🔇 Muted ${member.user.tag}.`);
     }
 
+    // ----------------------
     // UNMUTE
+    // ----------------------
     if (command === "unmute") {
         const member = message.mentions.members.first();
         if (!member) return message.reply("Mention someone to unmute.");
@@ -122,9 +147,11 @@ client.on("messageCreate", async (message) => {
         if (!role) return message.reply("There is no Muted role.");
 
         await member.roles.remove(role);
-        message.reply(`🔊 Unmuted ${member.user.tag}.`);
+        return message.reply(`🔊 Unmuted ${member.user.tag}.`);
     }
-}); // <-- THIS closes messageCreate properly
+});
 
+// ----------------------
 // Login
+// ----------------------
 client.login(process.env.TOKEN);
