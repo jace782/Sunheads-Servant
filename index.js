@@ -113,13 +113,14 @@ client.on("messageCreate", async (message) => {
         message.reply(`🔇 Muted ${member.user.tag}.`);
     }
 
-    // UNMUTE
-    if (command === "unmute") {
-        const member = message.mentions.members.first();
-        if (!member) return message.reply("Mention someone to unmute.");
-       // Unmute command ends here
+   // UNMUTE
+if (command === "unmute") {
+  const member = message.mentions.members.first();
+  if (!member) return message.reply("Mention someone to unmute.");
+}
 
+// CLOSES the messageCreate event
 });
 
-// ✅ Login the bot
+// Login
 client.login(process.env.TOKEN);
