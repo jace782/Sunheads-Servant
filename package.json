@@ -1,7 +1,6 @@
 {
   "name": "sunheads-servant",
   "version": "1.0.0",
-  "description": "Sunhead's Servant Discord Bot",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
