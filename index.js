@@ -113,14 +113,18 @@ client.on("messageCreate", async (message) => {
         message.reply(`🔇 Muted ${member.user.tag}.`);
     }
 
-   // UNMUTE
-if (command === "unmute") {
-  const member = message.mentions.members.first();
-  if (!member) return message.reply("Mention someone to unmute.");
-}
+    // UNMUTE
+    if (command === "unmute") {
+        const member = message.mentions.members.first();
+        if (!member) return message.reply("Mention someone to unmute.");
 
-// CLOSES the messageCreate event
-});
+        const role = message.guild.roles.cache.find(r => r.name === "Muted");
+        if (!role) return message.reply("There is no Muted role.");
+
+        await member.roles.remove(role);
+        message.reply(`🔊 Unmuted ${member.user.tag}.`);
+    }
+}); // <-- THIS closes messageCreate properly
 
 // Login
 client.login(process.env.TOKEN);
